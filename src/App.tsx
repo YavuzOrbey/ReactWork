@@ -11,7 +11,9 @@ function App({thename}:any) {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-
+        <p>
+          Code Change From Priti!
+        </p>
         {thename}
         <a
           className="App-link"
