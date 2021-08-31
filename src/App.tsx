@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App({thename}:any) {
-  console.log(thename);
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +10,6 @@ function App({thename}:any) {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-
-        {thename}
         <a
           className="App-link"
           href="https://reactjs.org"
