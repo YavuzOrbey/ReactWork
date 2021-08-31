@@ -7,7 +7,7 @@ type Book = {
 }
 
 
-const Testing = (props:object) => {
+const Testing = (props:any) => {
     
     const {books} = props;
     const deleteBook = (id:number) => {
@@ -17,3 +17,5 @@ const Testing = (props:object) => {
     return <button onClick={() => deleteBook(2)}>Delete Book</button>
 
 }
+
+export default Testing;
