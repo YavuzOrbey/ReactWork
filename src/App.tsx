@@ -4,7 +4,7 @@ import {booksData} from './books-data'
 import './App.css';
 import BookListYavuz from './BookListYavuz'
 
-function App() {
+function App(props:any) {
   return (
     <BookListYavuz books={booksData} />
   );
