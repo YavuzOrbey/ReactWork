@@ -10,13 +10,10 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-<<<<<<< HEAD
-=======
         <p>
           Code Change From Priti!
         </p>
         {thename}
->>>>>>> a35e1bb7866cc01620b89ea820c53c678dc2e2b4
         <a
           className="App-link"
           href="https://reactjs.org"
