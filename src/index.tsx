@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {booksData} from './books-data'
 ReactDOM.render(
   <React.StrictMode>
