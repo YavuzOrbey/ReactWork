@@ -32,10 +32,10 @@ const BookListYavuz = (props:any) => {
     }
 
     const addBook = (title:string, author:string, publish_date:string, edition:number) => {
-        const bookToAdd = [title, author, publish_date, edition]
         const lastBook = currentBookList.to(-1)
         const id = lastBook.to(0) + 1
-        currentBookList.push(id, bookToAdd)
+        const bookToAdd = [id, title, author, publish_date, edition]
+        setCurrentBookList(currentBookList + bookToAdd)
     }
     return <div className="bookList container">
         <div className="row">
