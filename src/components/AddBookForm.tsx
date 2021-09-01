@@ -1,8 +1,12 @@
-import './AddBookFormYavuz.css'
+import '../style/AddBookForm.css'
+import {useState} from 'react'
 const AddBookForm = () => {
+    const [book, setBook] = useState({});
+    function handleSubmit(){
+        setBook({})
+    }
 
-
-    return <form className="add-book">
+    return <form className="add-book" onSubmit={handleSubmit}>
         <p>Add New Book</p>
         <label>Title</label>
         <input type="text" className="form-control" placeholder="Title"/>

@@ -1,20 +1,20 @@
 import React, {useState} from 'react'
-import BookYavuz from "./BookYavuz"
-import BookTypeYavuz from "./BookTypeYavuz";
-import BookEditYavuz from "./BookEditYavuz";
-import  './BookListYavuz.css';
+import Book from "./components/Book"
+import BookType from "./types/BookType";
+import BookEdit from "./components/EditBook";
+import  './style/BookList.css';
 const BookListYavuz = (props:any) => {
     const {books} = props;
 
     let editableBooks:any = {};
     const [currentBookList, setCurrentBookList] = useState(books)
-    currentBookList.forEach((book:BookTypeYavuz)=> {
+    currentBookList.forEach((book:BookType)=> {
         editableBooks[book.id] = false;
     })
     const [editableBookList, setEditableBookList] = useState(editableBooks)
 
     const deleteBook = (id:number) => {
-        const newBookList = currentBookList.filter((book:BookTypeYavuz)=>book.id!==id)
+        const newBookList = currentBookList.filter((book:BookType)=>book.id!==id)
         setCurrentBookList(newBookList)
     }
 
@@ -40,9 +40,9 @@ const BookListYavuz = (props:any) => {
     return <div className="bookList container">
         <div className="row">
     {
-    currentBookList.map((currentBook:BookTypeYavuz, index:number)=> {
-        const whichBook = editableBookList[currentBook.id]===true ?  <BookEditYavuz key={currentBook.id} book={currentBook} deleteBook={deleteBook} updateBook={updateBook}/>:
-        <BookYavuz key={currentBook.id} book={currentBook} deleteBook={deleteBook} editBook={editBook}/>;
+    currentBookList.map((currentBook:BookType, index:number)=> {
+        const whichBook = editableBookList[currentBook.id]===true ?  <BookEdit key={currentBook.id} book={currentBook} deleteBook={deleteBook} updateBook={updateBook}/>:
+        <Book key={currentBook.id} book={currentBook} deleteBook={deleteBook} editBook={editBook}/>;
 
 
         console.log(editableBookList[currentBook.id]===true)
